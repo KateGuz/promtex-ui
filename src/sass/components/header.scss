@@ -1,0 +1,93 @@
+@import "../bin/variables";
+
+.logo__link {
+  display: block;
+  font-weight: bold;
+  color: $color-white;
+  font-size: 18px;
+
+  &:focus {
+    outline: none;
+    color: $color-white;
+  }
+}
+
+.main-nav {
+  position: relative;
+  background-color: $dark-blue-color;
+  display: flex;
+  justify-content: space-between;
+  min-height: 55px;
+  padding: 15px 30px;
+}
+
+// Mobile buttons
+.main-nav__toggle-menu {
+  border: 0;
+  background-color: transparent;
+  display: block;
+  color: $color-white;
+  font-size: 25px;
+  padding: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.main-nav--closed .main-nav__wrapper {
+  display: none;
+}
+
+.main-nav__wrapper {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  padding: 0 70px 30px;
+  background-color: $light-blue-color;
+  color: $color-grey;
+}
+
+.main-nav__item:first-child a {
+  padding-top: 25px;
+}
+
+.main-nav__item:last-child a {
+  border-width: 3px;
+}
+
+.main-nav__item a {
+  display: block;
+  padding: 15px 0;
+  color: $color-grey;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid $color-grey;
+
+  &:focus {
+    outline: none;
+    color: $color-white;
+  }
+}
+
+.page-header__title-wrapper {
+  min-height: 657px;
+  background: url("/img/main_back.png") no-repeat center;
+  padding-top: 35px;
+}
+
+.page-header__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $dark-blue-color;
+  margin-left: 30px;
+}
+
+.page-header__schema{
+  display: block;
+  margin: 200px auto;
+}
