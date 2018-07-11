@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     var navMain = document.querySelector('.main-nav');
     var navOpen = document.querySelector('.main-nav__toggle-menu');
 
@@ -17,4 +18,34 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#main-nav__wrapper").slideUp();
         }
     });
+
+    // TODO: Change build to support let and const
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items: 1,
+        loop: true,
+        // responsiveClass: true,
+        // responsive: {
+        //     0: {
+        //         items: 1
+        //     },
+        //     600: {
+        //         items: 3
+        //     },
+        //     1000: {
+        //         items: 5
+        //     }
+        // }
+    });
+
+    $('.products__carousel-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
+// Go to the previous item
+    $('.products__carousel-prev').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
+    });
 });
+

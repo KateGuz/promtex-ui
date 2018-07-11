@@ -9,7 +9,7 @@ var babel               = require('gulp-babel');
 var include             = require("gulp-include");
 var uglify              = require('gulp-uglify');
 
-
+// TODO: Eto ne rabotaet!!!!!!!!
 gulp.task('libs', function () {
     gulp.src(cnf.libs.css)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))

@@ -10,7 +10,7 @@
     "src": {
       "sass": "src/sass/main.scss",
       "html": "src/**/*.html",
-      "js": "src/js/main.js",
+      "js": "src/js/*.js",
       "fonts": "src/fonts/**/*.*",
       "img": {
         "compress": [
@@ -28,8 +28,8 @@
       "img": "dist/img"
     },
     "libs": {
-      "js": "src/js/libs.js",
-      "css": "src/css/libs.css"
+      "js": "src/js/libs",
+      "css": "src/lib/*.css"
     }
   },
   "author": "",
