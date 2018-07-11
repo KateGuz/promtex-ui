@@ -74,9 +74,10 @@
 }
 
 .page-header__title-wrapper {
-  min-height: 657px;
-  background: url("/img/main_back.png") no-repeat center;
+  background: url("/img/mobile_main_back.png") no-repeat;
+  background-size: cover;
   padding-top: 35px;
+  padding-bottom: 60px;
 }
 
 .page-header__title {
@@ -89,5 +90,5 @@
 
 .page-header__schema{
   display: block;
-  margin: 200px auto;
+  margin: 230px auto 0 auto;
 }
