@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('open');
             navMain.classList.remove('main-nav--closed');
             navMain.classList.add('main-nav--opened');
-        }else{
+            $(".main-nav__wrapper").slideDown()
+        } else {
             console.log('close');
             navMain.classList.remove('main-nav--opened');
             navMain.classList.add('main-nav--closed');
+            $("#main-nav__wrapper").slideUp();
         }
     });
 });

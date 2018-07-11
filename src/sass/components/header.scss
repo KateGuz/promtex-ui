@@ -9,6 +9,7 @@
   &:focus {
     outline: none;
     color: $color-white;
+    text-decoration: none;
   }
 }
 
@@ -36,7 +37,7 @@
   }
 }
 
-.main-nav--closed .main-nav__wrapper {
+.main-nav__wrapper {
   display: none;
 }
 
@@ -88,7 +89,7 @@
   margin-left: 30px;
 }
 
-.page-header__schema{
+.page-header__schema {
   display: block;
   margin: 230px auto 0 auto;
 }
