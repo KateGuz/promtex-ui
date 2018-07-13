@@ -7,25 +7,71 @@
 
 .sectors__title {
   font-size: 20px;
+  margin-bottom: 30px;
+  color: $dark-blue-color;
 }
 
 .sectors__sector-item {
-  padding: 20px 10px 20px 20px;
+  padding: 0 10px 0 20px;
   text-align: left;
+  border-bottom: 1px $color-dark-grey solid;
+
+  &:first-child {
+    border-top: 1px $color-dark-grey solid;
+  }
 }
 
-.sectors__sector-item--closed .sectors__sector-description {
-  display: none;
+.sectors__sector-item {
+  position: relative;
 
+  &:after {
+    content: "\f410";
+    display: block;
+    position: absolute;
+    font-family: $font-awesome-font-family;
+    font-size: 20px;
+    top: 17px;
+    right: 16px;
+    color: $dark-blue-color;
+  }
+}
+
+.sectors__sector-item--closed {
+  padding-left: 0;
+  padding-right: 0;
+
+  .sectors__sector-title {
+    padding-left: 20px;
+    background-color: $color-grey;
+    font-weight: normal;
+  }
+
+  .sectors__sector-body {
+    display: none;
+  }
+
+  &:after {
+    content: "\f0fe";
+    display: block;
+    position: absolute;
+    font-family: $font-awesome-font-family;
+    font-size: 20px;
+    top: 17px;
+    right: 18px;
+    color: $dark-blue-color;
+  }
+}
+
+.sectors__sector-body {
+  font-size: 14px;
 }
 
 .sectors__sector-title {
-  background-color: $color-grey;
   font-size: 16px;
   font-weight: bold;
   padding: 20px 0;
 }
 
-.sectors__sector-body {
-  font-size: 14px;
+.sectors__sector-image {
+  margin: 20px 0;
 }
