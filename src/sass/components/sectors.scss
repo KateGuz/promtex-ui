@@ -1,0 +1,31 @@
+@import "../bin/variables";
+
+.sectors {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.sectors__title {
+  font-size: 20px;
+}
+
+.sectors__sector-item {
+  padding: 20px 10px 20px 20px;
+  text-align: left;
+}
+
+.sectors__sector-item--closed .sectors__sector-description {
+  display: none;
+
+}
+
+.sectors__sector-title {
+  background-color: $color-grey;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.sectors__sector-body {
+  font-size: 14px;
+}
