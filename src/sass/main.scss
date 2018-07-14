@@ -1,7 +1,12 @@
 @import "bin/reset";
 @import "bin/_setting";
 // components
-@import "components/header";
-@import "components/about";
-@import "components/products";
-@import "components/sectors";
+@import "components/nav";
+@import "components/bottom";
+
+@import "components/main/header";
+@import "components/main/about";
+@import "components/main/products";
+@import "components/main/sectors";
+
+@import "components/anketa/content";
