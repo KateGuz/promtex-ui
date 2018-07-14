@@ -1,0 +1,30 @@
+@import "../../bin/variables";
+
+.clients {
+  padding: 50px 35px 40px;
+}
+
+.clients__title {
+  font-size: 20px;
+  color: $dark-blue-color;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.clients__two-column,
+.clients__one-column{
+  img {
+    display: block;
+  }
+  display: flex;
+  margin-bottom: 38px;
+  align-items:flex-end;
+}
+
+.clients__two-column {
+  justify-content: space-between;
+}
+
+.clients__one-column {
+  justify-content: center;
+}
