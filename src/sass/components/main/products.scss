@@ -1,9 +1,8 @@
 @import "../../bin/variables";
 
 .products {
-  min-height: 510px;
-  // TODO: Fix image size!!!!
-  background: url("/img/main/products/products_back.png") no-repeat;
+  background: url("/img/main/products/mobile_products_back.png") no-repeat;
+  background-size: cover;
   padding: 40px 20px 30px;
 }
 
