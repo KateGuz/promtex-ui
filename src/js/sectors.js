@@ -1,13 +1,13 @@
 $(function () {
-    var array = $(".sectors__sector-item .sectors__sector-title");
+    var array = $(".sectors__sector-item");
     for (var i = 0; i < array.length; i++) {
         var element = array[i];
         $(element).on('click', function () {
-            if (!$(this).parent().hasClass("sectors__sector-item--closed")){
+            if (!$(this).hasClass("sectors__sector-item--closed")){
                 addClosedClass($(".sectors__sector-item .sectors__sector-title"));
-                $(this).parent().addClass("sectors__sector-item--closed")
+                $(this).addClass("sectors__sector-item--closed")
             }else {
-                $(this).parent().removeClass("sectors__sector-item--closed")
+                $(this).removeClass("sectors__sector-item--closed")
             }
         })
     }
