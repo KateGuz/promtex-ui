@@ -1,0 +1,42 @@
+@import "../../bin/variables";
+
+.cert {
+  padding: 50px 20px 35px;
+  background: url("/img/main/cert/mobile_cert_back.png") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.cert__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-white;
+}
+
+.cert__item-wrapper {
+  border: 10px solid $color-white;
+  margin: 40px auto 20px;
+}
+
+.cert__carousel-next,
+.cert__carousel-prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: rgba(1, 1, 1, .64);
+  color: $color-white;
+  font-size: 40px;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: calc(50% - 5px);
+  z-index: 1;
+}
+
+.cert__carousel-next {
+  right: 0;
+}
+.cert__carousel-prev {
+  left: 0;
+}

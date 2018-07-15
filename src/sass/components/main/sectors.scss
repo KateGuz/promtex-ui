@@ -12,7 +12,7 @@
 }
 
 .sectors__sector-item {
-  padding: 0 10px 0 20px;
+  padding: 0 20px 0 20px;
   text-align: left;
   border-bottom: 1px $color-dark-grey solid;
 
@@ -25,13 +25,13 @@
   position: relative;
 
   &:after {
-    content: "\f410";
+    content: "\f146";
     display: block;
     position: absolute;
     font-family: $font-awesome-font-family;
     font-size: 20px;
     top: 17px;
-    right: 16px;
+    right: 20px;
     color: $dark-blue-color;
   }
 }
@@ -57,7 +57,7 @@
     font-family: $font-awesome-font-family;
     font-size: 20px;
     top: 17px;
-    right: 18px;
+    right: 20px;
     color: $dark-blue-color;
   }
 }
@@ -74,4 +74,6 @@
 
 .sectors__sector-image {
   margin: 20px 0;
+  max-width: 100%;
+  height: auto;
 }
