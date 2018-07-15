@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('open');
             navMain.classList.remove('main-nav--closed');
             navMain.classList.add('main-nav--opened');
-            $(".main-nav__wrapper").slideDown()
+            $(".main-nav__items").slideDown()
         } else {
             console.log('close');
             navMain.classList.remove('main-nav--opened');
             navMain.classList.add('main-nav--closed');
-            $("#main-nav__wrapper").slideUp();
+            $(".main-nav__items").slideUp();
         }
     });
 
