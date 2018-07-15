@@ -1,0 +1,62 @@
+@import "../../bin/variables";
+
+.examples {
+  padding: 45px 20px 0;
+}
+
+.examples__title {
+  color: $dark-blue-color;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.examples__list {
+  margin-top: 35px;
+}
+
+.examples__item-img-wrapper {
+  position: relative;
+}
+
+.examples__item-img {
+  width: 100%;
+  display: block;
+}
+
+.examples__item-description {
+  min-height: 70px;
+  padding: 10px;
+  background-color: rgba(1, 1, 1, .64);
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $color-white;
+}
+
+.examples__item-text {
+  margin: 25px auto 40px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.examples__button {
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $color-orange;
+  color: $color-white;
+  border: solid 2px $color-orange;
+  padding: 15px 0 10px 0;
+  margin: auto auto 30px auto;
+  display: block;
+
+  &:focus {
+    background-color: $color-white;
+    color: $color-orange;
+  }
+}
