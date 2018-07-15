@@ -41,8 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.products__carousel-next').click(function() {
         owl.trigger('next.owl.carousel');
     });
-// Go to the previous item
+    // Go to the previous item
     $('.products__carousel-prev').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
+    });
+
+    $('.cert__carousel-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
+    // Go to the previous item
+    $('.cert__carousel-prev').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
         owl.trigger('prev.owl.carousel', [300]);
