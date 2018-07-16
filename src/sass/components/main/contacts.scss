@@ -1,0 +1,46 @@
+@import "../../bin/variables";
+
+.contacts {
+  padding: 45px 20px 25px;
+  background-color: $color-grey;
+}
+
+.contacts__title {
+  color: $dark-blue-color;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.contacts__data-wrapper{
+  margin-left: 10px;
+}
+
+.contacts__name {
+  margin-bottom: 30px;
+}
+
+.contacts__map {
+  margin: 40px auto 35px;
+}
+
+.contacts__icon-map {
+  margin-right: 20px;
+}
+
+.contacts__icon-fax {
+  margin-right: 14px;
+}
+
+.contacts__icon-mob {
+  margin-right: 21px;
+}
+
+.contacts__icon-mail {
+  margin-right: 15px;
+}
+
+.contacts__data li {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
