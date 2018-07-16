@@ -37,5 +37,34 @@
   line-height: 16px;
   color: $color-orange;
   max-width: 120px;
-  margin:0 auto;
+  margin: 0 auto;
+}
+
+@media #{$tablet-width} {
+  .about {
+    padding-top: 65px;
+  }
+
+  .about__title {
+    margin-bottom: 45px;
+  }
+
+  .about__description {
+    margin-bottom: 55px;
+  }
+
+  .about__items {
+    max-width: 585px;
+    margin: 0 auto 60px;
+  }
+
+  .about__item {
+    width: auto;
+    margin-right: 35px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
