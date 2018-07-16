@@ -3,6 +3,7 @@
 .anketa__img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .anketa_content {
@@ -35,10 +36,14 @@
   margin-top: 10px;
 }
 
+.anketa__button-wrapper {
+  text-align: center;
+}
+
 .anketa__button {
   width: 100%;
   height: auto;
-  max-width: 350px;
+  max-width: 320px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
@@ -57,4 +62,17 @@
 
 .anketa__button-download {
   margin-right: 5px;
+}
+
+@media #{$tablet-width} {
+  .anketa__content-wrapper {
+    max-width: 985px;
+    margin: 0 auto;
+  }
+
+  .anketa__button {
+    display: inline;
+    margin: 20px 20px 40px 20px;
+  }
+
 }
