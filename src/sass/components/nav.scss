@@ -88,7 +88,8 @@
   .main-nav__items {
     position: static;
     padding: 0;
-    display: block;
+    // to override jquery style
+    display: block !important;
     background-color: transparent;
     width: auto;
   }

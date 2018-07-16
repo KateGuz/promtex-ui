@@ -2,12 +2,15 @@
 
     @@include('../nav.html')
 
-    <div class="header__title-wrapper">
-        <div class="container">
+    <div class="header__title-wrapper ">
+        <div class="header__title-wrapper-container">
             <h1 class="header__title">Экологическое<br class="visible-on-mobile"> промышленное <br class="visible-on-mobile">оборудование</h1>
             <p class="header__description hidden-on-mobile">Мы решим экологические вопросы вашего предприятия</p>
-            <img class="header__schema" width="293" height="288" src="/img/main/about/main_schema.png"
-                 alt="work_schema">
+            <picture>
+                <source media="(min-width: 768px)" srcset="/img/main/about/work_schema.png">
+                <img class="header__schema" src="/img/main/about/main_schema.png"
+                     alt="work_schema">
+            </picture>
         </div>
     </div>
 </header>

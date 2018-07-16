@@ -3,7 +3,7 @@
 .header__title-wrapper {
   // TODO : Fix background on >768px
   // TODO : Decrease size of picture for mobile devices!!!
-  background: url("/img/main/about/mobile_main_back.png") no-repeat;
+  background: url("/img/main/about/mobile_main_back.jpg") no-repeat;
   background-size: cover;
   padding-top: 35px;
   padding-bottom: 60px;
@@ -20,11 +20,36 @@
 
 .header__schema {
   display: block;
-  margin: 230px auto 0 auto;
+  margin: 230px auto 0;
 }
 
 @media #{$tablet-width} {
+  .header__title {
+    margin-left: 0;
+  }
   .header__description {
-    margin-top: 25px;
+    margin-top: 18px;
+  }
+
+  .header__title-wrapper {
+    background: url("/img/main/about/main_back.jpg") no-repeat center center;
+    min-height: 540px;
+    background-size: cover;
+    padding-top: 60px;
+  }
+
+  .header__title-wrapper-container {
+    max-width: 740px;
+    margin: 0 auto;;
+  }
+
+  .header__schema {
+    margin-top: 105px;
+  }
+}
+
+@media #{$desktop-width} {
+  .header__title-wrapper-container {
+    max-width: 960px;
   }
 }
