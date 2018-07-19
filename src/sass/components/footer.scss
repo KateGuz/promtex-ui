@@ -12,3 +12,9 @@
   line-height: 18px;
   color: $color-white;
 }
+
+@media #{$desktop-width} {
+  .footer__content {
+    padding: 45px 0;
+  }
+}
