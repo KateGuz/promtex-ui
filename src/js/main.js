@@ -23,19 +23,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // TODO: Change build to support let and const
 
     // PRODUCTS MOBILE CAROUSEL
-    var owlProductsMobile = $('.products__owl-carousel-mobile');
+    var owlProductsMobile = $('.owl-carousel.products__owl-carousel-mobile');
     owlProductsMobile.owlCarousel({
         items: 1,
         loop: true,
-        autoWidth: true,
     });
 
     // PRODUCTS DESKTOP CAROUSEL
-    var owlProductsDesktop = $('.owl-carousel');
+    var owlProductsDesktop = $('.owl-carousel.products__owl-carousel-desktop');
     owlProductsDesktop.owlCarousel({
         items: 1,
         loop: true,
-        autoWidth: true,
     });
 
     $('.products__carousel-next').click(function() {
@@ -49,6 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
         owlProductsMobile.trigger('prev.owl.carousel');
         owlProductsDesktop.trigger('prev.owl.carousel');
     });
+
+    // CERTIFICATES MOBILE CAROUSEL (KATE, YOUR CODE HERE EPTE!!!111)
+
 
     $('.cert__carousel-next').click(function() {
         owlProductsMobile.trigger('next.owl.carousel');
