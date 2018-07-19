@@ -19,43 +19,45 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
     // TODO: Change build to support let and const
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
+
+    // PRODUCTS MOBILE CAROUSEL
+    var owlProductsMobile = $('.products__owl-carousel-mobile');
+    owlProductsMobile.owlCarousel({
         items: 1,
         loop: true,
-        // responsiveClass: true,
-        // responsive: {
-        //     0: {
-        //         items: 1
-        //     },
-        //     600: {
-        //         items: 3
-        //     },
-        //     1000: {
-        //         items: 5
-        //     }
-        // }
+        autoWidth: true,
+    });
+
+    // PRODUCTS DESKTOP CAROUSEL
+    var owlProductsDesktop = $('.owl-carousel');
+    owlProductsDesktop.owlCarousel({
+        items: 1,
+        loop: true,
+        autoWidth: true,
     });
 
     $('.products__carousel-next').click(function() {
-        owl.trigger('next.owl.carousel');
+        owlProductsMobile.trigger('next.owl.carousel');
+        owlProductsDesktop.trigger('next.owl.carousel');
     });
     // Go to the previous item
     $('.products__carousel-prev').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
-        owl.trigger('prev.owl.carousel', [300]);
+        owlProductsMobile.trigger('prev.owl.carousel');
+        owlProductsDesktop.trigger('prev.owl.carousel');
     });
 
     $('.cert__carousel-next').click(function() {
-        owl.trigger('next.owl.carousel');
+        owlProductsMobile.trigger('next.owl.carousel');
     });
     // Go to the previous item
     $('.cert__carousel-prev').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
-        owl.trigger('prev.owl.carousel', [300]);
+        owlProductsMobile.trigger('prev.owl.carousel', [300]);
     });
 });
 

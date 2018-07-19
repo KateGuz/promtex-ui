@@ -43,6 +43,8 @@
 @media #{$tablet-width} {
   .about {
     padding-top: 65px;
+    max-width: 940px;
+    margin: 0 auto;
   }
 
   .about__title {

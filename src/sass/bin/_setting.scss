@@ -4,7 +4,7 @@ body {
 }
 
 .hidden-on-mobile {
-  display: none;
+  display: none !important;
 }
 
 .visible-on-mobile {
@@ -12,11 +12,19 @@ body {
 }
 
 @media #{$tablet-width} {
-  .hidden-on-mobile {
-    display: block;
-  }
+
 
   .visible-on-mobile {
-    display: none;
+    display: none !important;
+  }
+}
+
+@media #{$desktop-width} {
+  .hidden-on-desktop {
+    display: none !important;
+  }
+
+  .visible-on-desktop {
+    display: block !important;
   }
 }
