@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         owlProductsMobile.trigger('next.owl.carousel');
         owlProductsDesktop.trigger('next.owl.carousel');
     });
-    // Go to the previous item
     $('.products__carousel-prev').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
@@ -48,17 +47,29 @@ document.addEventListener('DOMContentLoaded', function () {
         owlProductsDesktop.trigger('prev.owl.carousel');
     });
 
-    // CERTIFICATES MOBILE CAROUSEL (KATE, YOUR CODE HERE EPTE!!!111)
+    // CERTIFICATES MOBILE CAROUSEL
+    var owlCertMobile = $('.owl-carousel.cert__owl-carousel-mobile');
+    owlCertMobile.owlCarousel({
+        items: 1,
+        loop: true,
+    });
 
+    // CERTIFICATES DESKTOP CAROUSEL
+    var owlCertDesktop = $('.owl-carousel.cert__owl-carousel-desktop');
+    owlCertDesktop.owlCarousel({
+        items: 3,
+        loop: true,
+    });
 
     $('.cert__carousel-next').click(function() {
-        owlProductsMobile.trigger('next.owl.carousel');
+        owlCertMobile.trigger('next.owl.carousel');
+        owlCertDesktop.trigger('next.owl.carousel');
     });
-    // Go to the previous item
     $('.cert__carousel-prev').click(function() {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
-        owlProductsMobile.trigger('prev.owl.carousel', [300]);
+        owlCertMobile.trigger('prev.owl.carousel');
+        owlCertDesktop.trigger('next.owl.carousel');
     });
 });
 
