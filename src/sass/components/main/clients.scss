@@ -11,20 +11,31 @@
   margin-bottom: 35px;
 }
 
-.clients__two-column,
-.clients__one-column{
-  img {
-    display: block;
-  }
+.clients__items {
   display: flex;
-  margin-bottom: 40px;
-  align-items:flex-end;
-}
-
-.clients__two-column {
-  justify-content: space-between;
-}
-
-.clients__one-column {
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
+}
+
+.clients__item {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.clients__item img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media #{$tablet-width} {
+  .clients__items {
+    margin:0 auto;
+    max-width: 600px;
+    justify-content: space-between;
+  }
+
+  .clients__item {
+    width: auto;
+  }
 }
