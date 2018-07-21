@@ -1,6 +1,7 @@
 @import "../../bin/variables";
 
 .products {
+  // TODO: Cut picture with different proportion? (height is too big for mobile)
   background: url("/img/main/products/products_back_768x1229.jpg") no-repeat;
   background-size: cover;
   padding: 40px 20px 30px;
@@ -87,13 +88,21 @@
 @media #{$desktop-width} {
 
   .products {
+    background: url("/img/main/products/products_back_1920x541.jpg") no-repeat;
+    background-position-x: center;
     min-height: 540px;
+    padding-top: 65px;
+  }
+
+  .products__title {
+    margin-bottom:40px;
   }
 
   .products__owl-carousel-desktop {
     display: block !important;
     max-width: 810px;
     margin: 0 auto;
+    position: relative;
 
     .products__item-wrapper {
       background-color: rgba(243, 243, 243, .63);
@@ -108,6 +117,10 @@
       }
     }
 
+    .products__item-body{
+      padding-top:18px;
+    }
+
     .products__item-body-title {
       color: $dark-blue-color;
       font-size: 18px;
@@ -117,8 +130,36 @@
     .products__item-body-desc {
       color: #000;
       font-size: 12px;
+      line-height:18px;
     }
 
+    .owl-dots{
+      position: absolute;
+      bottom: 20px;
+      right: calc(50% - 15px);
+    }
+
+  }
+
+  .products__link-wrapper {
+    position: absolute;
+    bottom: 55px;
+    right: calc(50% - 195px);;
+    z-index: 1;
+  }
+
+  .products__carousel-next,
+  .products__carousel-prev{
+    background-color: transparent;
+    color: $dark-blue-color;
+  }
+
+  .products__carousel-next {
+    right: calc(50% - 405px);
+  }
+
+  .products__carousel-prev {
+    left: calc(50% - 405px);
   }
 }
 

@@ -48,24 +48,6 @@
   line-height: 18px;
 }
 
-.examples__button {
-  width: 200px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
-  background-color: $color-orange;
-  color: $color-white;
-  border: solid 2px $color-orange;
-  padding: 15px 0 10px 0;
-  margin: auto auto 30px auto;
-  display: block;
-
-  &:focus {
-    background-color: $color-white;
-    color: $color-orange;
-  }
-}
-
 @media #{$tablet-width}  {
   .examples__item-text {
     margin: 25px auto 60px;
@@ -104,5 +86,12 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: bold;
+  }
+
+  .examples__clients-link {
+    padding-bottom: 30px;
+    .button {
+      margin: 0 auto;
+    }
   }
 }

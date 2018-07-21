@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
   position: relative;
   font-family: 'Open Sans', sans-serif;
@@ -9,6 +11,26 @@ body {
 
 .visible-on-mobile {
   display: inline;
+}
+
+.button {
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;;
+  line-height: 18px;
+  background-color: $color-orange;
+  color: $color-white;
+  border: solid 2px $color-orange;
+  padding: 15px 0 10px 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  &:focus {
+    background-color: $color-white;
+    color: $color-orange;
+  }
 }
 
 @media #{$tablet-width} {
