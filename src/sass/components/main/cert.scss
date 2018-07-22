@@ -47,19 +47,9 @@
   }
 }
 
-.cert__owl-carousel-mobile {
+.cert__owl-carousel {
   max-width: 280px;
   margin: 50px auto 0;
-}
-
-.cert__owl-carousel-desktop {
-  max-width: 650px;
-  margin: 50px auto 0;
-  position: relative;
-
-  .cert__item-wrapper {
-    max-width: 170px;
-  }
 }
 
 @media #{$tablet-width}{
@@ -87,8 +77,15 @@
     margin-bottom: 10px;
   }
 
-  .cert__owl-carousel-desktop {
+  .cert__owl-carousel {
     display: block !important;
+    max-width: 650px;
+    margin: 50px auto 0;
+    position: relative;
+
+    .cert__item-wrapper {
+      max-width: 170px;
+    }
   }
 
   .cert__carousel-next,

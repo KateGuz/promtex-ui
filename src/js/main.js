@@ -36,40 +36,34 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
     });
 
-    $('.products__carousel-next').click(function() {
+    $('.products__carousel-next').click(function () {
         owlProductsMobile.trigger('next.owl.carousel');
         owlProductsDesktop.trigger('next.owl.carousel');
     });
-    $('.products__carousel-prev').click(function() {
+    $('.products__carousel-prev').click(function () {
         // With optional speed parameter
         // Parameters has to be in square bracket '[]'
         owlProductsMobile.trigger('prev.owl.carousel');
         owlProductsDesktop.trigger('prev.owl.carousel');
     });
 
-    // CERTIFICATES MOBILE CAROUSEL
-    var owlCertMobile = $('.owl-carousel.cert__owl-carousel-mobile');
-    owlCertMobile.owlCarousel({
+    // CERTIFICATES CAROUSEL
+    var owlCert = $('.owl-carousel.cert__owl-carousel');
+    owlCert.owlCarousel({
         items: 1,
         loop: true,
+        responsive: {
+            1024: {
+                items: 3
+            }
+        }
     });
 
-    // CERTIFICATES DESKTOP CAROUSEL
-    var owlCertDesktop = $('.owl-carousel.cert__owl-carousel-desktop');
-    owlCertDesktop.owlCarousel({
-        items: 3,
-        loop: true,
+    $('.cert__carousel-next').click(function () {
+        owlCert.trigger('next.owl.carousel');
     });
-
-    $('.cert__carousel-next').click(function() {
-        owlCertMobile.trigger('next.owl.carousel');
-        owlCertDesktop.trigger('next.owl.carousel');
-    });
-    $('.cert__carousel-prev').click(function() {
-        // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
-        owlCertMobile.trigger('prev.owl.carousel');
-        owlCertDesktop.trigger('next.owl.carousel');
+    $('.cert__carousel-prev').click(function () {
+        owlCert.trigger('prev.owl.carousel');
     });
 });
 
