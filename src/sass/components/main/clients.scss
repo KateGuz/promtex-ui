@@ -1,26 +1,26 @@
 @import "../../bin/variables";
 
 .clients {
-  padding: 50px 35px 10px;
+  padding: 70px 35px 40px;
 }
 
 .clients__title {
   font-size: 20px;
   color: $dark-blue-color;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .clients__items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  height: 200px;
 }
 
 .clients__item {
   width: 50%;
-  margin-bottom: 30px;
 }
 
 .clients__item img {
@@ -30,9 +30,10 @@
 
 @media #{$tablet-width} {
   .clients__items {
-    margin:0 auto;
+    margin: 20px auto;
     max-width: 600px;
     justify-content: space-between;
+    height: 100px;
   }
 
   .clients__item {
