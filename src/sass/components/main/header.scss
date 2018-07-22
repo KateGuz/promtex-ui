@@ -1,8 +1,6 @@
 @import "../../bin/variables";
 
 .header__header-wrapper {
-  // TODO : Fix background on >768px
-  // TODO : Decrease size of picture for mobile devices!!!
   background: url("/img/main/about/main_back_768x1618.jpg") no-repeat;
   background-size: cover;
   padding-top: 35px;
@@ -32,7 +30,7 @@
   }
 
   .header__header-wrapper {
-    background: url("/img/main/about/main_back_1920x544.jpg") no-repeat center center;
+    background: url("/img/main/about/main_back_1024x540.jpg") no-repeat center center;
     min-height: 540px;
     background-size: cover;
     padding-top: 60px;
@@ -45,5 +43,11 @@
 
   .header__schema {
     margin-top: 105px;
+  }
+}
+
+@media #{$desktop-width} {
+  .header__header-wrapper {
+    background: url("/img/main/about/main_back_1920x544.jpg") no-repeat center center;
   }
 }

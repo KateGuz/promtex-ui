@@ -1,11 +1,9 @@
 @import "../../bin/variables";
 
 .products {
-  // TODO: Cut picture with different proportion? (height is too big for mobile)
   background: url("/img/main/products/products_back_768x1229.jpg") no-repeat;
   background-size: cover;
   padding: 50px 20px 30px;
-  //max-height: 510px;
 }
 
 .products__carousel {
@@ -76,6 +74,10 @@
 }
 
 @media #{$tablet-width} {
+  .products {
+    background: url("/img/main/products/products_back_1024x523.jpg") no-repeat;
+  }
+
   .products__carousel-next {
     right: calc(50% - 250px);
   }
@@ -86,7 +88,6 @@
 }
 
 @media #{$desktop-width} {
-
   .products {
     background: url("/img/main/products/products_back_1920x541.jpg") no-repeat;
     background-position-x: center;
