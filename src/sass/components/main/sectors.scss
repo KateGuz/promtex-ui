@@ -12,6 +12,7 @@
 }
 
 .sectors__sector-item {
+  position: relative;
   padding: 0 20px 0 20px;
   text-align: left;
   border-bottom: 1px $color-dark-grey solid;
@@ -19,10 +20,6 @@
   &:first-child {
     border-top: 1px $color-dark-grey solid;
   }
-}
-
-.sectors__sector-item {
-  position: relative;
 
   &:after {
     content: "\f146";
@@ -76,4 +73,85 @@
   margin: 20px 0;
   max-width: 100%;
   height: auto;
+}
+
+@media #{$tablet-width} {
+  .sectors {
+    max-width: 1005px;
+    margin: 0 auto;
+  }
+
+  .sectors__sector-list {
+    position: relative;
+    min-height: 305px;
+  }
+
+  .sectors__sector-item {
+    padding: 0;
+    background-color: $color-grey;
+    position: static;
+    border: 0;
+
+    &:first-child {
+      border-top: 1px $color-grey solid;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .sectors__sector-title {
+    padding: 15px 20px;
+    font-size: 14px;
+    max-width: 225px;
+    background-color: $color-grey;
+    border-bottom: 1px $color-grey solid;
+    border-left: 1px $color-grey solid;
+  }
+
+  .sectors__sector-item--closed {
+    background-color: transparent;
+    .sectors__sector-title {
+      background-color: transparent;
+    }
+  }
+
+  .sectors__sector-body {
+    height: 283px; // related to sectors count :(
+    align-items: flex-start;
+    display: flex;
+    background-color: $color-grey;
+    padding: 15px 15px 20px 20px;
+    position: absolute;
+    left: 225px;
+    top: 0;
+  }
+
+  .sectors__sector-text {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  .sectors__sector-image {
+    order: -1;
+    margin-right: 27px;
+    margin-top: 0;
+    max-width: 280px;
+    border: 3px solid $color-white;
+  }
+}
+
+@media #{$desktop-width} {
+  .sectors__sector-title {
+    max-width: 260px;
+  }
+
+  .sectors__sector-body {
+    left: 260px;
+  }
+
+  .sectors__sector-image {
+    max-width: 330px;
+  }
 }
