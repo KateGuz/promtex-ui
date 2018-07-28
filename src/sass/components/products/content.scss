@@ -1,0 +1,123 @@
+@import "../../bin/variables";
+
+.prod {
+  padding: 40px 0 60px;
+}
+
+.prod__title {
+  font-size: 20px;
+  color: $dark-blue-color;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.prod__category-item-title, .prod__item-title, .prod__category-back {
+  padding: 20px;
+  border-bottom: 1px $color-grey solid;
+}
+
+.prod__category-back {
+  position: relative;
+
+  p {
+    margin-left: 30px;
+  }
+
+  &:before {
+    content: "\f104";
+    display: block;
+    position: absolute;
+    font-family: $font-awesome-font-family;
+    font-weight: 900;
+    font-size: 20px;
+    top: 17px;
+    left: 20px;
+    color: $dark-blue-color;
+  }
+}
+
+.prod__category-item--closed {
+  position: relative;
+
+  .prod__list {
+    display: none;
+  }
+
+  .prod__category-item-title:after {
+    content: "\f105";
+    display: block;
+    position: absolute;
+    font-family: $font-awesome-font-family;
+    font-weight: 900;
+    font-size: 20px;
+    top: 17px;
+    right: 30px;
+    color: $dark-blue-color;
+  }
+
+  &:first-child {
+    border-top: 1px $color-grey solid;
+  }
+}
+
+.prod__category-item--opened {
+  border-top: 1px $color-grey solid;
+
+  .prod__category-item-title {
+    display: none;
+  }
+
+  .prod__item-body {
+    display: none;
+  }
+}
+
+.prod__category-item--inside {
+  border-top: 1px $color-grey solid;
+
+  .prod__category-item-title {
+    position: relative;
+
+    p {
+      margin-left: 30px;
+    }
+
+    &:before {
+      content: "\f104";
+      display: block;
+      position: absolute;
+      font-family: $font-awesome-font-family;
+      font-weight: 900;
+      font-size: 20px;
+      top: 17px;
+      left: 20px;
+      color: $dark-blue-color;
+    }
+  }
+
+  .prod__item-title {
+    border: none;
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: $dark-blue-color;
+  }
+
+  .prod__item-body {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .prod__item-image {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    max-width: 400px;
+  }
+}
+
+.prod__category-item--hide, .prod__item--hide, .prod__category-back--hide {
+  display: none;
+}
