@@ -4,7 +4,7 @@ $(function () {
         var element = array[i].getElementsByClassName("prod__category-item-title")[0];
         $(element).on('click', function () {
             var width = $(window).width();
-            if (width < 768) {
+            if (width < 1024) {
                 if ($(this.parentNode).hasClass("prod__category-item--closed")) {
                     $(this.parentNode).removeClass("prod__category-item--closed");
                     $(this.parentNode).addClass("prod__category-item--opened");
@@ -16,7 +16,15 @@ $(function () {
                 }
                 showBackLink();
             } else {
-
+                if ($(this.parentNode).hasClass("prod__category-item--default")) {
+                    $(this.parentNode).removeClass("prod__category-item--default");
+                } else if ($(this.parentNode).hasClass("prod__category-item--closed")) {
+                    $(this.parentNode).removeClass("prod__category-item--closed");
+                    $(this.parentNode).addClass("prod__category-item--opened");
+                } else if ($(this.parentNode).hasClass("prod__category-item--opened")) {
+                    $(this.parentNode).removeClass("prod__category-item--opened");
+                    $(this.parentNode).addClass("prod__category-item--closed");
+                }
             }
         })
     }
@@ -39,16 +47,19 @@ $(function () {
         var element = array[i].getElementsByClassName("prod__item-title")[0];
         $(element).on('click', function () {
             var width = $(window).width();
-            if (width < 768) {
+            var $products = $(".prod__item");
+            if (width < 1024) {
                 if ($(this.parentNode.parentNode.parentNode).hasClass("prod__category-item--opened")) {
                     $(this.parentNode.parentNode.parentNode).removeClass("prod__category-item--opened");
                     $(this.parentNode.parentNode.parentNode).addClass("prod__category-item--inside");
+                    closeOpenedProduct($products);
                     $(this.parentNode).addClass("prod__item--opened");
-                    hideOtherProducts($(".prod__item"));
+                    hideOtherProducts($products);
                     hideBackLink();
                 }
             } else {
-
+                closeOpenedProduct($products);
+                $(this.parentNode).addClass("prod__item--opened");
             }
         })
     }
@@ -94,6 +105,15 @@ function hideOtherProducts(array) {
         var element = array[i];
         if (!$(element).hasClass("prod__item--opened")) {
             $(element).addClass("prod__item--hide");
+        }
+    }
+}
+
+function closeOpenedProduct(array) {
+    for (var i = 0; i < array.length; i++) {
+        var element = array[i];
+        if ($(element).hasClass("prod__item--opened")) {
+            $(element).removeClass("prod__item--opened");
         }
     }
 }
