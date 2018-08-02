@@ -1,6 +1,28 @@
 @import "variables";
 
 body {
+
+}
+.header {
+  flex: 0 0 50px;
+  background-color: green;
+}
+
+.footer {
+  flex: 0 0 50px;
+  background-color: yellow;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
   position: relative;
   font-family: 'Open Sans', sans-serif;
 }
@@ -32,6 +54,12 @@ body {
     color: $color-orange;
   }
 }
+
+
+.text-indent {
+  text-indent:  35px;
+}
+
 
 @media #{$tablet-width} {
   .visible-on-mobile {
