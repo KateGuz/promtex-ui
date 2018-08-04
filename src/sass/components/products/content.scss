@@ -2,6 +2,7 @@
 
 .prod {
   padding: 40px 0 60px;
+  min-height: 800px;
 }
 
 .prod__title {
@@ -15,6 +16,7 @@
 .prod__category-item-title, .prod__item-title, .prod__category-back {
   padding: 20px;
   border-bottom: 1px $color-grey solid;
+  cursor: pointer;
 }
 
 .prod__category-back {
@@ -254,7 +256,7 @@
       display: block;
       position: absolute;
       left: 400px;
-      top: 0;
+      top: 45px;
       padding: 0 20px;
     }
   }
@@ -264,5 +266,18 @@
     width: 100%;
     margin: 30px auto;
     max-width: 400px;
+  }
+
+  .prod__item-title--cloned {
+    display: block !important;
+    position: absolute;
+    left: 400px;
+    top: 0;
+    padding: 0 20px;
+    border: none;
+    width: 545px;
+    text-align: center;
+    font-size: 16px;
+    color: $dark-blue-color;
   }
 }

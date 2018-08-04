@@ -1,3 +1,7 @@
+$(document).ready(function(){
+    showOpenProductTitle();
+});
+
 $(function () {
     var array = $(".prod__category-item");
     for (var i = 0; i < array.length; i++) {
@@ -48,22 +52,44 @@ $(function () {
         $(element).on('click', function () {
             var width = $(window).width();
             var $products = $(".prod__item");
+            var itemNode = this.parentNode;
+            var categoryNode = this.parentNode.parentNode.parentNode;
             if (width < 1024) {
-                if ($(this.parentNode.parentNode.parentNode).hasClass("prod__category-item--opened")) {
-                    $(this.parentNode.parentNode.parentNode).removeClass("prod__category-item--opened");
-                    $(this.parentNode.parentNode.parentNode).addClass("prod__category-item--inside");
+                if ($(categoryNode).hasClass("prod__category-item--opened")) {
+                    $(categoryNode).removeClass("prod__category-item--opened");
+                    $(categoryNode).addClass("prod__category-item--inside");
                     closeOpenedProduct($products);
-                    $(this.parentNode).addClass("prod__item--opened");
+                    $(itemNode).addClass("prod__item--opened");
                     hideOtherProducts($products);
                     hideBackLink();
                 }
             } else {
+                removePreviouslyClonedTitle();
                 closeOpenedProduct($products);
-                $(this.parentNode).addClass("prod__item--opened");
+                $(itemNode).addClass("prod__item--opened");
+                showOpenProductTitle();
             }
         })
     }
 });
+
+function showOpenProductTitle() {
+    var prodItem = $(".prod__item--opened");
+    var title = prodItem.children()[0];
+    var clonedTitle = $(title).clone();
+    $(clonedTitle).addClass("prod__item-title--cloned");
+    clonedTitle.appendTo(prodItem);
+}
+
+function removePreviouslyClonedTitle() {
+    var extraTitle = $(".prod__item-title--cloned");
+    console.log(extraTitle);
+    extraTitle.remove();
+    console.log($(".prod__item-title--cloned"));
+    //console.log(extraTitle.parentNode());
+    //extraTitle.parentNode.removeChild(extraTitle)
+}
+
 
 function showBackLink() {
     var backElement = document.getElementsByClassName("prod__category-back")[0];
