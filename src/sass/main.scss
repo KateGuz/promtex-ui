@@ -1,7 +1,7 @@
 @import "bin/variables";
 @import "bin/reset";
 @import "bin/_setting";
-// components
+
 @import "components/nav";
 @import "components/footer";
 
@@ -9,11 +9,9 @@
 @import "components/main/about";
 @import "components/main/products";
 @import "components/main/sectors";
-@import "components/main/clients";
 @import "components/main/cert";
-@import "components/main/examples";
 @import "components/main/contacts";
 
-@import "components/anketa/content";
-
-@import "components/products/content";
+@import "components/anketa";
+@import "components/products";
+@import "components/clients";

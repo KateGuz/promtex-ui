@@ -5,12 +5,10 @@ body {
 }
 .header {
   flex: 0 0 50px;
-  background-color: green;
 }
 
 .footer {
   flex: 0 0 50px;
-  background-color: yellow;
 }
 
 .main {
@@ -44,7 +42,7 @@ body {
   background-color: $color-orange;
   color: $color-white;
   border: solid 2px $color-orange;
-  padding: 15px 0 10px 0;
+  padding: 14px 0 11px 0;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -55,15 +53,17 @@ body {
   }
 }
 
-
 .text-indent {
   text-indent:  35px;
 }
 
-
 @media #{$tablet-width} {
   .visible-on-mobile {
     display: none !important;
+  }
+
+  .visible-on-tablet {
+    display: block !important;
   }
 }
 

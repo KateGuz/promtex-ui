@@ -7,18 +7,18 @@
 
 .sectors__title {
   font-size: 20px;
-  margin-bottom: 40px;
-  color: $dark-blue-color;
+  margin-bottom: 50px;
+  color: $color-dark-blue;
 }
 
 .sectors__sector-item {
   position: relative;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   text-align: left;
-  border-bottom: 1px $color-dark-grey solid;
+  border-bottom: 1px $color-grey solid;
 
   &:first-child {
-    border-top: 1px $color-dark-grey solid;
+    border-top: 1px $color-grey solid;
   }
 
   &:after {
@@ -29,17 +29,18 @@
     font-size: 20px;
     top: 17px;
     right: 20px;
-    color: $dark-blue-color;
+    color: $color-dark-blue;
   }
 }
 
 .sectors__sector-item--closed {
   padding-left: 0;
   padding-right: 0;
+  background-color: $color-light-grey;
 
   .sectors__sector-title {
     padding-left: 20px;
-    background-color: $color-grey;
+    padding-right: 45px;
     font-weight: normal;
   }
 
@@ -55,7 +56,7 @@
     font-size: 20px;
     top: 17px;
     right: 20px;
-    color: $dark-blue-color;
+    color: $color-dark-blue;
   }
 }
 
@@ -70,14 +71,33 @@
 }
 
 .sectors__sector-image {
-  margin: 20px 0;
+  display: block;
+  margin: 20px auto;
+  max-height: 200px;
   max-width: 100%;
-  height: auto;
 }
 
 @media #{$tablet-width} {
+  .sectors__sector-item--closed {
+    .sectors__sector-title {
+      padding-left: 0;
+    }
+  }
+
+  .sectors__sector-item {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .sectors__sector-image {
+    margin: 30px auto;
+    height: 200px;
+  }
+}
+
+@media #{$desktop-width} {
   .sectors {
-    max-width: 1005px;
+    max-width: 945px;
     margin: 0 auto;
   }
 
@@ -88,7 +108,7 @@
 
   .sectors__sector-item {
     padding: 0;
-    background-color: $color-grey;
+    background-color: $color-light-grey;
     position: static;
     border: 0;
 
@@ -104,8 +124,8 @@
   .sectors__sector-title {
     padding: 15px 20px;
     font-size: 14px;
-    max-width: 225px;
-    background-color: $color-grey;
+    max-width: 350px;
+    background-color: $color-light-grey;
     border-bottom: 1px $color-grey solid;
     border-left: 1px $color-grey solid;
   }
@@ -114,44 +134,28 @@
     background-color: transparent;
     .sectors__sector-title {
       background-color: transparent;
+      padding-left: 20px;
+      border-right: 1px $color-grey solid;
     }
   }
 
   .sectors__sector-body {
-    height: 283px; // related to sectors count :(
-    align-items: flex-start;
-    display: flex;
-    background-color: $color-grey;
-    padding: 15px 15px 20px 20px;
+    height: 440px;
+    background-color: $color-light-grey;
+    border-top: 1px $color-grey solid;
+    border-bottom: 1px $color-grey solid;
+    border-right: 1px $color-grey solid;
+    padding: 30px;
     position: absolute;
-    left: 225px;
+    left: 350px;
     top: 0;
   }
 
   .sectors__sector-text {
-    padding-top: 10px;
     font-size: 12px;
   }
 
   .sectors__sector-image {
-    order: -1;
-    margin-right: 27px;
-    margin-top: 0;
-    max-width: 280px;
     border: 3px solid $color-white;
-  }
-}
-
-@media #{$desktop-width} {
-  .sectors__sector-title {
-    max-width: 260px;
-  }
-
-  .sectors__sector-body {
-    left: 260px;
-  }
-
-  .sectors__sector-image {
-    max-width: 330px;
   }
 }

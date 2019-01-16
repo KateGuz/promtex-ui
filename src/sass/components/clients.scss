@@ -1,0 +1,86 @@
+@import "../bin/variables";
+
+.clients {
+  padding: 60px 15px 30px;
+  margin: 0 auto;
+  width: 320px;
+}
+
+.clients__title {
+  font-size: 20px;
+  color: $color-dark-blue;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clients__item-wrapper {
+  width: 295px;
+  margin-bottom: 40px;
+}
+
+.clients__item-img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.clients__item-title {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 5px 0;
+  color: $color-dark-blue;
+
+  a {
+    text-decoration: none;
+    color: $color-dark-blue;
+
+    &:visited {
+      color: $color-dark-blue;
+    }
+  }
+}
+
+.clients__item-details {
+  font-size: 12px;
+  color: $color-super-dark-grey;
+}
+
+.clients__item-desc {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.clients__button {
+  .button {
+    margin: 0 auto 20px;
+  }
+}
+
+@media #{$tablet-width} {
+  .clients {
+    width: 680px;
+  }
+
+  .clients__list {
+    justify-content: space-between;
+  }
+}
+
+@media #{$desktop-width} {
+  .clients {
+    width: 1005px;
+  }
+
+  .clients__list {
+    justify-content: start;
+  }
+
+  .clients__item-wrapper {
+    margin: 0 15px 40px;
+  }
+}

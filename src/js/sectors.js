@@ -4,7 +4,7 @@ $(function () {
         var element = array[i];
         $(element).on('click', function () {
             var width = $(window).width();
-            if (width < 768) {
+            if (width < 1024) {
                 if (!$(this).hasClass("sectors__sector-item--closed")) {
                     $(this).addClass("sectors__sector-item--closed")
                 } else {

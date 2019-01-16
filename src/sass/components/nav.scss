@@ -1,82 +1,83 @@
 @import "../bin/variables";
 
-.logo__link {
-  display: block;
-  font-weight: bold;
-  color: $color-white;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:focus {
-    outline: none;
-    color: $color-white;
-    text-decoration: none;
-  }
-}
-
 .main-nav {
+  background-color: $color-dark-blue;
+  padding: 11px 30px 11px;
   position: relative;
   z-index: 1;
-  background-color: $dark-blue-color;
-  min-height: 55px;
-  padding: 15px 30px;
 }
 
 .main-nav__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  color: $color-white;
+  font-size: 18px;
+  text-decoration: none;
+
+  a:hover, a:focus, a:active {
+    background: none;
+    outline: none;
+  }
+
+  a {
+    font-weight: bold;
+    color: $color-white;
+    font-size: 18px;
+    text-decoration: none;
+  }
 }
 
 // Mobile buttons
 .main-nav__toggle-menu {
   border: 0;
   background-color: transparent;
-  display: block;
   color: $color-white;
   font-size: 25px;
   padding: 0;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
 }
 
 .main-nav__items {
   display: none;
   position: absolute;
-  top: 58px;
+  top: 50px;
   left: 0;
   width: 100%;
-  padding: 0 70px 30px;
-  background-color: $light-blue-color;
-  color: $color-grey;
+  padding-bottom: 30px;
+  background-color: $color-light-grey;
 }
 
 .main-nav__item:first-child a {
-  padding-top: 25px;
-}
-
-.main-nav__item:last-child a {
-  border-width: 3px;
+  padding-top: 20px;
 }
 
 .main-nav__item a {
   display: block;
   padding: 15px 0;
-  color: $color-grey;
+  max-width: 200px;
+  margin: auto;
+  color: $color-super-dark-grey;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
-  border-bottom: 1px solid $color-grey;
+  text-align: center;
+  border-bottom: 1px solid $color-super-dark-grey;
 
-  &:focus {
+  &:hover, &:focus, &:active {
     outline: none;
-    color: $color-white;
+    color: $color-dark-blue;
   }
 }
 
 @media #{$tablet-width} {
+  .main-nav {
+    padding: 17px 30px 15px;
+  }
+
   .main-nav__wrapper {
     max-width: 945px;
     margin: 0 auto;
@@ -98,12 +99,17 @@
   .main-nav__item {
     display: inline-block;
     margin-left: 40px;
-  }
 
-  .main-nav__item  a{
-    border: 0;
-    padding: 0 !important;
-    font-size: 14px;
+    a {
+      border: 0;
+      padding: 0 !important;
+      color: $color-grey;
+
+      &:focus, &:hover, &:active {
+        outline: none;
+        color: $color-white;
+      }
+    }
   }
 }
 

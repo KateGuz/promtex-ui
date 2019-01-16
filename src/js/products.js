@@ -1,5 +1,9 @@
 $(document).ready(function(){
-    showOpenProductTitle();
+    var width = $(window).width();
+    if (width >= 1024) {
+        showOpenProductTitle();
+        recalculateHeight();
+    }
 });
 
 $(function () {
@@ -29,6 +33,7 @@ $(function () {
                     $(this.parentNode).removeClass("prod__category-item--opened");
                     $(this.parentNode).addClass("prod__category-item--closed");
                 }
+                recalculateHeight();
             }
         })
     }
@@ -68,10 +73,19 @@ $(function () {
                 closeOpenedProduct($products);
                 $(itemNode).addClass("prod__item--opened");
                 showOpenProductTitle();
+                recalculateHeight();
             }
         })
     }
 });
+
+function recalculateHeight() {
+    var titleVerticalShift = 225;
+    var itemHeight = $(".prod__item--opened .prod__item-body").height();
+    var listHeight = $(".prod__category-list").height();
+    var blockHeight = itemHeight > listHeight ? itemHeight : listHeight;
+    $(".main").height(blockHeight + titleVerticalShift);
+}
 
 function showOpenProductTitle() {
     var prodItem = $(".prod__item--opened");
@@ -83,13 +97,8 @@ function showOpenProductTitle() {
 
 function removePreviouslyClonedTitle() {
     var extraTitle = $(".prod__item-title--cloned");
-    console.log(extraTitle);
     extraTitle.remove();
-    console.log($(".prod__item-title--cloned"));
-    //console.log(extraTitle.parentNode());
-    //extraTitle.parentNode.removeChild(extraTitle)
 }
-
 
 function showBackLink() {
     var backElement = document.getElementsByClassName("prod__category-back")[0];

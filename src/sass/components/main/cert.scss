@@ -1,7 +1,7 @@
 @import "../../bin/variables";
 
 .cert {
-  padding: 55px 30px 35px;
+  padding: 55px 40px 35px;
   background: url("/img/main/cert/cert_back_768x1400.jpg") no-repeat;
   background-size: cover;
   position: relative;
@@ -19,8 +19,6 @@
   cursor: pointer;
   width: 60px;
   height: 60px;
-  border-radius: 100%;
-  background-color: rgba(1, 1, 1, .64);
   color: $color-white;
   font-size: 40px;
   text-align: center;
@@ -31,11 +29,11 @@
 }
 
 .cert__carousel-next {
-  right: calc(50% - 160px);
+  right: calc(50% - 170px);
 }
 
 .cert__carousel-prev {
-  left: calc(50% - 160px);
+  left: calc(50% - 170px);
 }
 
 .cert__item-wrapper {
@@ -50,7 +48,37 @@
 
 .cert__owl-carousel {
   max-width: 280px;
-  margin: 50px auto 0;
+  margin: 40px auto 0;
+}
+
+@media (min-width: 330px) {
+  .cert__carousel-next {
+    right: calc(50% - 180px);
+  }
+
+  .cert__carousel-prev {
+    left: calc(50% - 180px);
+  }
+}
+
+@media (min-width: 350px) {
+  .cert__carousel-next {
+    right: calc(50% - 190px);
+  }
+
+  .cert__carousel-prev {
+    left: calc(50% - 190px);
+  }
+}
+
+@media (min-width: 370px) {
+  .cert__carousel-next {
+    right: calc(50% - 200px);
+  }
+
+  .cert__carousel-prev {
+    left: calc(50% - 200px);
+  }
 }
 
 @media #{$tablet-width}{
@@ -59,13 +87,12 @@
   }
 
   .cert__carousel-next {
-    right: calc(50% - 250px);
+    right: calc(50% - 220px);
   }
 
   .cert__carousel-prev {
-    left: calc(50% - 250px);
+    left: calc(50% - 220px);
   }
-
 }
 
 @media #{$desktop-width} {
@@ -96,11 +123,11 @@
   }
 
   .cert__carousel-next {
-    right: calc(50% - 420px);
+    right: calc(50% - 380px);
   }
 
   .cert__carousel-prev {
-    left: calc(50% - 420px);
+    left: calc(50% - 380px);
   }
 
 }

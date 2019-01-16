@@ -1,9 +1,8 @@
 @import "../bin/variables";
 
 .footer__content {
-  background-color: $dark-blue-color;
-  min-height: 80px;
-  padding: 25px 0;
+  background-color: $color-dark-blue;
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -11,10 +10,4 @@
   font-size: 12px;
   line-height: 18px;
   color: $color-white;
-}
-
-@media #{$desktop-width} {
-  .footer__content {
-    padding: 45px 0;
-  }
 }

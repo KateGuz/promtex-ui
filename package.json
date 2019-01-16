@@ -12,6 +12,7 @@
       "html": "src/**/*.html",
       "js": "src/js/*.js",
       "fonts": "src/fonts/**/*.*",
+      "doc": "src/doc/**/*.*",
       "img": {
         "compress": [
           "src/img/**/*.*",
@@ -25,7 +26,8 @@
       "html": "dist",
       "js": "dist/js/",
       "fonts": "dist/fonts",
-      "img": "dist/img"
+      "img": "dist/img",
+      "doc": "dist/doc"
     },
     "libs": {
       "js": "src/js/libs",

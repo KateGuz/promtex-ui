@@ -10,6 +10,7 @@ gulp.task('build', function () {
         'js',
         'fonts',
         'img',
-        'libs'
+        'libs',
+        'doc'
     );
 });
