@@ -129,7 +129,6 @@
 
   .prod__item-image {
     margin: 30px auto;
-    //max-width: 320px;
     text-align: center;
     display: table;
     table-layout: fixed;
@@ -311,6 +310,9 @@ h4 {
 
   .prod__item-image {
     margin: 20px auto;
+    text-align: center;
+    display: table;
+    table-layout: fixed;
   }
 
   .prod__item-title.prod__item-title--cloned {
